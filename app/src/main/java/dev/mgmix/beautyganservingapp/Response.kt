@@ -1,6 +1,8 @@
 package dev.mgmix.beautyganservingapp
 
+import com.google.gson.annotations.SerializedName
+
 data class Response(
-    val result: Boolean,
-    val url: String
+    @SerializedName("path")
+    val path: String
 )

@@ -4,15 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/srcImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/noimage"
+        />
+
+    <Button
+        android:id="@+id/srcButton"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        app:layout_constraintTop_toBottomOf="@id/srcImage"
+        app:layout_constraintStart_toStartOf="@id/srcImage"
+        app:layout_constraintEnd_toEndOf="@id/srcImage"
+        android:text="Add Source Image"
+        />
+
+    <ImageView
+        android:id="@+id/refImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/noimage"
+        app:layout_constraintTop_toBottomOf="@id/srcButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/refButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/refImage"
+        app:layout_constraintStart_toStartOf="@id/refImage"
+        app:layout_constraintEnd_toEndOf="@id/refImage"
+        android:text="Add Reference Image"
+        />
+
+
+
+    <Button
+        android:id="@+id/execute"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="실행"
+        android:textSize="24sp"
+        />
+
+    <include
+        android:id="@+id/progressBar"
+        layout="@layout/layout_progress"
+        android:visibility="invisible"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,13 +3,15 @@ package dev.mgmix.beautyganservingapp
 import io.reactivex.Single
 import okhttp3.Call
 import okhttp3.MultipartBody
-import retrofit2.http.Multipart
-import retrofit2.http.POST
-import retrofit2.http.Part
+import retrofit2.http.*
 
 interface Api  {
 
-    @POST
-    fun uploadImage(@Part srcImage: MultipartBody.Part, @Part refImage: MultipartBody.Part) : Call<Response>
+    @Multipart
+    @POST("/upload")
+    fun uploadImage(@Part srcImage: MultipartBody.Part, @Part refImage: MultipartBody.Part) : Single<Response>
+
+//    @GET("/image/{name}")
+////    fun getImage(@Path("name") name: String): Single<String>
 
 }
