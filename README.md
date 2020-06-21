@@ -4,8 +4,8 @@ Makeup Image serving demo app using BeautyGAN (https://github.com/Honlan/BeautyG
 
 ## Screen Sample
 
-<img src="https://github.com/mgmix/BeautyGanServingApp/action/blob/master/app_launch1.gif" height="480">
-<img src="https://github.com/mgmix/BeautyGanServingApp/action/blob/master/app_launch2.gif" height="480">
+<img src="https://github.com/mgmix/BeautyGanServingApp/blob/master/action/app_launch1.gif" height="480">
+<img src="https://github.com/mgmix/BeautyGanServingApp/blob/master/action/app_launch2.gif" height="480">
 
 
 ## Libraries
